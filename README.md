@@ -1,6 +1,7 @@
+
 # LinkTree☘️ --Django Project
 
-A simple Django-based application inspired by [Linktree](https://linktr.ee/). This project allows users to create a personalized page with links to their social profiles, websites, or any other URLs.
+<p>A simple Django-based application inspired by [Linktree](https://linktr.ee/). This project allows users to create a personalized page with links to their social profiles, websites, or any other URLs.</p>
 
 ## Table of Contents
 
