@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}
+        🔗Links
+        {% endblock %}</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        nav{padding: 0 20px;
+            min-height:50px;
+            border-bottom: 1px solid rgb(230, 230, 230);
+            box-shadow: 5px 0 20px lightgray;
+            display: flex;
+            justify-content: space-between;
+            
+            align-items: center;
+            font-size: 1.2rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        nav div a{
+            color:rgb(0, 0, 0);
+            text-decoration: none;
+           
+        }
+        nav div:nth-of-type(3){
+            border-radius: 7px;
+            padding: 7px;
+            border: 1px solid green;
+            background: rgb(56, 255, 103); 
+        }
+
+        nav div:nth-of-type(3):hover{
+            box-shadow: 5px 5px 10px rgb(56, 255, 103);
+        }
+        //link_form css
+        .content{
+            height:50vw;
+            width:100%;
+            display:flex;
+            flex-direction:column;
+    
+            align-items:center;
+            justify-content:center;
+        }
+    
+        input,select,h3{
+            height:30px;
+            width:100%;
+            margin:10px;
+            
+        }
+        input[type="submit"]{
+            background:lime;
+            border:none;
+            border-radius:10px;
+            box-shadow:-5px -5px 10px darkgreen inset;
+            transition:all 0.4s ease;
+        }
+    
+        input[type="submit"]:hover{
+            box-shadow:5px 5px 10px darkgreen inset;
+            font-weight:bolder;
+            transition:all 0.4s ease;
+    
+        }
+    
+        #content{
+            height: 50vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #content table{
+            
+            box-shadow: 0 7px 10px rgba(144, 238, 144, 0.393);
+            text-align: center;
+            width:80%;
+        }
+        #content table thead{
+            background: greenyellow;
+        }
+    
+        #content table td,th{
+            padding: 5px;
+        } 
+        
+        h3{
+            color:red;
+            font-weight:bolder;
+        }
+    
+        hr + form >input[value="delete"]{
+            background:red;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>☘️Link Plant</div>
+        <div>My Links</div>
+        <div><a href="{% url "link-create" %}">+ Add Links</a></div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

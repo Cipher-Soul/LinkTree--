@@ -1,0 +1,34 @@
+{% extends '_base.html  '%}
+{% block title %}
+        🔗Links
+{% endblock %}
+
+
+{% block content %}
+
+<div id="content">
+    <table >
+        <thead>
+            <tr>
+                <th>text </th>
+                <th>url</th>
+                <th>profile</th>
+                <th>edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            {% for link in object_list%}
+            <tr>
+                <td>{{link.text}}</td>
+                <td><a href="{{link.url}}">{{link.url}}👁️‍🗨️</a></td>
+                <td><a href="{% url 'profile' link.profile.slug %}">{{link.profile}}</a></td>
+                <td><a href="{% url 'link-update' link.id %}">edit</a></td>
+                <td><a href="{% url 'link-delete' link.id %}" style="color:red;background:lightred;">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

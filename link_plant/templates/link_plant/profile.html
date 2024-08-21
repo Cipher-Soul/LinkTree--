@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}
+        🔗Links
+        {% endblock %}</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            text-align:center;
+            margin:20px 0;
+        }
+        h1{
+            font-weight:bolder;
+        }
+
+    </style>
+</head>
+<body style="background:{{profile.bg_color}}">
+    <style>
+        h1{
+            margin:40px;
+        }
+        a button{
+            height:30px;
+            width:30%;
+            border:2px solid black;  
+            margin:20px 0;
+        }
+
+        a button:hover{
+            background:black;
+            color:white; 
+        }
+    </style>
+ <div class="main">
+    <h1>{{profile}}</h1>
+    {% for link in links %}
+    <a href="{{link.url}}" target="_blank" >
+    <button>{{link.text}}</button></a>
+    <br>
+    {% endfor %}
+ </div>
+</body>
+</html>
