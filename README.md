@@ -24,9 +24,7 @@
 - Simple analytics for tracking link clicks
 - Mobile-friendly design
 
-## Demo
 
-You can try a demo of the application at [Demo URL](https://example.com).
 
 ## Prerequisites
 
